@@ -95,13 +95,84 @@ Create Table oceny(
 ### 8. Zmodyfikuj tabele (ALTER TABLE ...) dodając:
 – (tabela oceny) ograniczenie niepozwalające na wstawianie ocen o wartościach mniejszych
 niż 2.0 oraz większych niż 5.0,   
+
+```
+ALTER TABLE oceny
+ADD CONSTRAINT spr_ocena CHECK  (wartosc>=2.0 and wartosc <= 5.0)
+```
+
 – (tabela przedmioty) ograniczenie niepozwalające na dodawanie przedmiotów o takich sa-
-mych nazwach (UNIQUE),     
+mych nazwach (UNIQUE),   
+
+```
+ALTER TABLE przedmioty
+ADD CONSTRAINT unq_przedmiot Unique (nazwa)
+```
+
 – (tabela kierunki) ograniczenie niepozwalające na dodawanie kierunków o takich samych
 nazwach,   
+
+```
+ALTER TABLE kierunki
+ADD CONSTRAINT unq_kierunek Unique (nazwa)
+```
+
 – (tabela kierunki) nową kolumnę o nazwie opis typu text, z domyślą wartością równą
 ‘brak opisu’. 
 
+```
+ALTER TABLE kierunki
+ADD opis text default 'brak opisu'
+```
+
+
 ### 9. Wypełnij utworzone wcześniej tabele przykładowymi danymi (polecenie INSERT), tak aby każda tabela zawierała co najmniej trzy wiersze (krotki).
 
+```
+INSERT INTO kierunki(kierunek_id, nazwa)
+values ('1', 'Informatyka')
+INSERT INTO kierunki(kierunek_id, nazwa)
+values ('2', 'Automatyka')
+INSERT INTO kierunki(kierunek_id, nazwa)
+values ('3', 'Robotyka')
+```
+```
+INSERT INTO studenci(nr_indeksu, imie, nazwisko, adres)
+values ('1', 'Jan', 'Anioł', 'ul. Słoneczna 10 Poznan')
+INSERT INTO studenci(nr_indeksu, imie, nazwisko, adres)
+values ('2', 'Jakub', 'Anioł', 'ul. Słoneczna 10 Poznan')
+INSERT INTO studenci(nr_indeksu, imie, nazwisko, adres)
+values ('3', 'Jerzy','Anioł', 'ul. Słoneczna 10 Poznan')
+```
+```
+INSERT INTO wykladowcy(wykladowca_id, imie, nazwisko)
+values ('1', 'John', 'Anioł')
+INSERT INTO wykladowcy(wykladowca_id, imie, nazwisko)
+values ('2', 'Jeremy', 'Anioł')
+INSERT INTO wykladowcy(wykladowca_id, imie, nazwisko)
+values ('3', 'JB','Anioł')
+```
+```
+INSERT INTO przedmioty(przedmiot_id, kierunek_id, wykladowca_id, nazwa)
+values ('1', '1', '1', 'Przedmiot 1')
+INSERT INTO przedmioty(przedmiot_id, kierunek_id, wykladowca_id, nazwa)
+values ('2', '2', '2', 'Przedmiot 2')
+INSERT INTO przedmioty(przedmiot_id, kierunek_id, wykladowca_id, nazwa)
+values ('3', '3', '3', 'Przedmiot 3')
+```
+```
+INSERT INTO oceny(ocena_id, nr_indeksu, przedmiot_id, wartosc)
+values ('1', '1','1','2')
+INSERT INTO oceny(ocena_id, nr_indeksu, przedmiot_id, wartosc)
+values ('2', '2','2','3')
+INSERT INTO oceny(ocena_id, nr_indeksu, przedmiot_id, wartosc)
+values ('3', '3','3','4')
+```
+
 ### 10. Zmień wszystkie oceny (wszystkim studentom) o wartości 2.0 na 3.0 (UPDATE).
+
+```
+UPDATE oceny
+SET wartosc = 3.0
+WHERE wartosc = 2.0; 
+```
