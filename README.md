@@ -8,10 +8,10 @@ USE uczelnia;
 ```
 
 ### 2. Utwórz nową tabelę o nazwie studenci zawierającą następujące kolumny:
-– nr_indeksu (klucz główny),
-– imie (ciąg znaków, niepuste),
-– nazwisko (ciąg znaków, niepuste),
-– adres (ciąg znaków, niepuste),
+– nr_indeksu (klucz główny),           
+– imie (ciąg znaków, niepuste),            
+– nazwisko (ciąg znaków, niepuste),           
+– adres (ciąg znaków, niepuste),            
 – narodowosc (ciąg znaków, niepuste, domyślnie ‘Polska’).
 
 ```
@@ -63,8 +63,7 @@ Create Table przedmioty(
 	primary key (przedmiot_id))
 ```
 
-### 6. Utwórz nową tabelę o nazwie studenci_przedmioty zawierającą następujące ko-
-lumny:
+### 6. Utwórz nową tabelę o nazwie studenci_przedmioty zawierającą następujące kolumny:
 
 – nr_indeksu (klucz obcy z tabeli studenci),   
 – przedmiot_id (klucz obcy z tabeli przedmioty),   
