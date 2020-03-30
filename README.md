@@ -1,5 +1,5 @@
 # bd_lab_2020
-## SQL#2
+## SQL#2 zestaw: `bd_lab_2_excersises.pdf`  
 ### 1. Utwórz nową bazę danych o nazwie uczelnia oraz wybierz ją (USE ...).
 
 ```
