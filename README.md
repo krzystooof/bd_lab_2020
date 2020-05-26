@@ -4,3 +4,6 @@ zestaw: `bd_lab_3_exercises.pdf`
 
 [SQL lab #3](lab3.md)    
 zestaw: `bd_lab_3_exercises.pdf`  
+
+[SQL lab #4](lab4.md)    
+zestaw: `bd_lab_6_exercises.pdf`  
