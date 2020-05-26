@@ -1,4 +1,4 @@
-## SQL#4 zestaw: `bd_lab_4_exercises.pdf`  
+## SQL#4 zestaw: `bd_lab_6_exercises.pdf`  
 
 ### 1. Wypisz wszystkie informacje o klientach (z tabeli Customers) w postaci dokumentu XML (PATH, ROOT, XMLNAMESPACES).
 
