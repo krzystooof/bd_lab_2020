@@ -47,7 +47,7 @@ WHERE Categories.CategoryID = @categoryID
 PRINT 'New product:' + @productName + ' kategoria: ' + @categoryName;
 ```
 
-![media/3.png](media/3.png)
+![media/3.png](media/4/3.png)
 
 ### 4.  SKONSTRUUJ PROCEDURĘ USTAWIAJĄCĄ RABAT (Discount) O PODANEJ WYSOKOŚCI PRODUKTOM, KTÓRYCH WARTOŚĆ (CENA JEDNOSTKOWA ● ILOŚĆ) JEST WIĘKSZA NIŻ PODANA WARTOŚĆ. ZADEMONSTRUJ DZIAŁANIE PROCEDURY.
 
